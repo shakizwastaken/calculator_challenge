@@ -1,7 +1,9 @@
 export const keyStyles = {
-  main: "bg-keyBgMain text-textColorDark shadow-keyShadowMain",
-  primary: "bg-keyBgPrimary text-textColorLight shadow-keyShadowPrimary",
-  accent: "bg-keyBgAccent text-textColorLight shadow-keyShadowAccent",
+  main: "bg-keyBgMain hover:bg-keyBgMainActive text-textColorDark shadow-keyShadowMain ",
+  primary:
+    "bg-keyBgPrimary  hover:bg-keyBgPrimaryActive text-textColorLight shadow-keyShadowPrimary",
+  accent:
+    "bg-keyBgAccent  hover:bg-keyBgAccentActive text-textColorLight shadow-keyShadowAccent",
 };
 
 export const keyTypes = {

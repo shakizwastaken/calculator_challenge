@@ -1,13 +1,16 @@
+import { useCalculator } from "../../context/calculator";
 import "./display.css";
 
 const DisplayContainer = ({ theme }) => {
+  const { current } = useCalculator();
+
   return (
     <div
       className={`displayContainer padding container text-${
         theme === "default" ? "textColorLight" : "textColorDark"
       }`}
     >
-      0
+      {current}
     </div>
   );
 };
