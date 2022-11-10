@@ -1,0 +1,15 @@
+@tailwind components;
+
+@layer components {
+  .keypadContainer {
+    @apply bg-keypadBg flex flex-col w-full text-xl;
+  }
+
+  .keypadRow {
+    @apply w-full flex justify-between items-center;
+  }
+
+  .key {
+    @apply cursor-pointer flex-1 flex justify-center items-center px-4 py-2 m-2 rounded-md;
+  }
+}

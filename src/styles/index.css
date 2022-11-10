@@ -1,0 +1,88 @@
+/*
+
+    name: League Spartan
+    link: https://fonts.google.com/specimen/League+Spartan
+
+*/
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.theme-default {
+  --main-background: hsl(222, 26%, 31%);
+  --keypad-background: hsl(223, 31%, 20%);
+  --screen-background: hsl(224, 36%, 15%);
+
+  --key-background-primary: hsl(225, 21%, 49%);
+  --key-background-primary-active: hsl(225, 51%, 76%);
+  --key-shadow-primary: hsl(224, 28%, 35%);
+
+  --key-background-accent: hsl(6, 63%, 50%);
+  --key-background-accent-active: hsl(6, 93%, 67%);
+  --key-shadow-accent: hsl(6, 70%, 34%);
+
+  --key-background-main: hsl(30, 25%, 89%);
+  --key-background-main-active: #fffffe;
+  --key-shadow-main: hsl(28, 16%, 65%);
+
+  --text-color-dark: hsl(221, 14%, 31%);
+  --text-color-light: hsl(0, 0%, 100%);
+}
+
+.theme-light {
+  --main-background: hsl(0, 0%, 90%);
+  --keypad-background: hsl(0, 5%, 81%);
+  --screen-background: hsl(0, 0%, 93%);
+
+  --key-background-primary: hsl(185, 42%, 37%);
+  --key-background-primary-active: hsl(185, 40%, 56%);
+  --key-shadow-primary: hsl(185, 58%, 25%);
+
+  --key-background-accent: hsl(25, 98%, 40%);
+  --key-background-accent-active: hsl(25, 100%, 61%);
+  --key-shadow-accent: hsl(25, 99%, 27%);
+
+  --key-background-main: hsl(45, 7%, 89%);
+  --key-shadow-main: hsl(35, 11%, 61%);
+  --key-background-main-active: #ffffff;
+
+  --text-color-dark: hsl(60, 10%, 19%);
+  --text-color-light: hsl(0, 0%, 100%);
+}
+
+.theme-neon {
+  --main-background: hsl(268, 75%, 9%);
+  --keypad-background: hsl(268, 71%, 12%);
+  --screen-background: hsl(268, 71%, 12%);
+
+  --key-background-primary: hsl(281, 89%, 26%);
+  --key-background-primary-active: hsl(268, 54%, 44%);
+  --key-shadow-primary: hsl(285, 91%, 52%);
+
+  --key-background-accent: hsl(176, 100%, 44%);
+  --key-background-accent-active: hsl(176, 100%, 79%);
+  --key-shadow-accent: hsl(177, 92%, 70%);
+
+  --key-background-main: hsl(268, 47%, 21%);
+  --key-background-main-active: hsl(280, 56%, 44%);
+  --key-shadow-main: hsl(290, 70%, 36%);
+
+  --text-color-dark: hsl(52, 100%, 62%);
+  --text-color-light: hsl(0, 0%, 100%);
+}
+
+@layer base {
+  * {
+    @apply font-bold font-main;
+  }
+
+  .padding {
+    @apply p-4;
+  }
+
+  .container {
+    @apply rounded-lg;
+  }
+}

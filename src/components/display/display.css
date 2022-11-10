@@ -1,0 +1,7 @@
+@tailwind components;
+
+@layer components {
+  .displayContainer {
+    @apply bg-screenBg flex justify-end items-end;
+  }
+}
