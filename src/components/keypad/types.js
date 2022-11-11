@@ -15,33 +15,33 @@ export const keyTypes = {
   operations: {
     addition: {
       label: "+",
-      value: "OPRATION_ADDITION",
+      value: "ADDITION",
     },
     substraction: {
       label: "-",
-      value: "OPRATION_SUBSTRACTION",
+      value: "SUBSTRACTION",
     },
     multiplication: {
       label: "x",
-      value: "OPRATION_MULTIPLICATION",
+      value: "MULTIPLICATION",
     },
     division: {
       label: "/",
-      value: "OPERATION_DIVISION",
+      value: "DIVISION",
     },
     calculate: {
       label: "=",
-      value: "OPERATION_CALCULATE",
+      value: "CALCULATE",
       style: keyStyles.accent,
     },
     reset: {
       label: "RESET",
-      value: "OPERATION_RESET",
+      value: "RESET",
       style: keyStyles.primary,
     },
     delete: {
       label: "DEL",
-      value: "OPERATION_DELETE",
+      value: "DELETE",
       style: keyStyles.primary,
     },
   },

@@ -1,4 +1,5 @@
 import { useCalculator } from "../../../context/calculator";
+import { dispatchPressButton } from "../../../context/calculator/actions";
 import { keyStyles } from "../types";
 
 const Key = ({ type }) => {
@@ -6,10 +7,12 @@ const Key = ({ type }) => {
 
   const { label, style } = type;
 
-  const onClick = () => {};
+  const onClick = () => {
+    dispatchPressButton(dispatch,type);
+  };
 
   return (
-    <div className={`key shadow-2xl ${style ? style : keyStyles.main}`}>
+    <div onClick={onClick} className={`key shadow-2xl ${style ? style : keyStyles.main}`}>
       {label}
     </div>
   );
