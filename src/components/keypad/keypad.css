@@ -12,4 +12,20 @@
   .key {
     @apply cursor-pointer flex-1 flex justify-center items-center px-4 py-2 m-2 rounded-md;
   }
+
+  .key.pressed {
+    @apply shadow-none translate-y-[1px];
+  }
+}
+
+.shadowMain {
+  box-shadow: 0px 3px var(--key-shadow-main);
+}
+
+.shadowPrimary {
+  box-shadow: 0px 3px var(--key-shadow-primary);
+}
+
+.shadowAccent {
+  box-shadow: 0px 3px var(--key-shadow-accent);
 }

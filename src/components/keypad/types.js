@@ -1,11 +1,11 @@
 import { Action } from "../../utils/actions";
 
 export const keyStyles = {
-  main: "bg-keyBgMain hover:bg-keyBgMainActive text-textColorDark shadow-keyShadowMain ",
+  main: "bg-keyBgMain hover:bg-keyBgMainActive text-textColorDark shadowMain",
   primary:
-    "bg-keyBgPrimary  hover:bg-keyBgPrimaryActive text-textColorLight shadow-keyShadowPrimary",
+    "bg-keyBgPrimary  hover:bg-keyBgPrimaryActive text-textColorLight shadowPrimary",
   accent:
-    "bg-keyBgAccent  hover:bg-keyBgAccentActive text-textColorLight shadow-keyShadowAccent",
+    "bg-keyBgAccent  hover:bg-keyBgAccentActive text-textColorLight shadowAccent",
 };
 
 export const keyTypes = {

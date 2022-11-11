@@ -75,7 +75,7 @@
 
 @layer base {
   * {
-    @apply font-bold font-main;
+    @apply font-bold font-main ease-out transition-[0.2s];
   }
 
   .padding {

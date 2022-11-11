@@ -21,10 +21,6 @@ export const calculatorReducer = (state, { type, payload }) => {
       operation?.calc();
       return { ...state, operation };
 
-    case actions.delete:
-      operation.setAction(payload).calc();
-      return { ...state, operation };
-
     case actions.reset:
       return {
         ...initialState,

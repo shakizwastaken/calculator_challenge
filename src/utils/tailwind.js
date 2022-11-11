@@ -20,3 +20,5 @@ exports.themeColors = {
   textColorDark: "var(--text-color-dark)",
   textColorLight: "var(--text-color-light)",
 };
+
+exports.themes = ["default", "light", "neon"];

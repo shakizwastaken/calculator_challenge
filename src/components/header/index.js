@@ -1,6 +1,7 @@
 import "./header.css";
 
-const themes = ["default", "light", "neon"];
+import CurrentTheme from "./currentTheme";
+import { themes } from "../../utils/tailwind";
 
 const HeaderContainer = ({ theme, setTheme }) => {
   const next = () => {
@@ -8,7 +9,6 @@ const HeaderContainer = ({ theme, setTheme }) => {
       themes.indexOf(theme) === themes.length - 1
         ? 0
         : themes.indexOf(theme) + 1;
-
     setTheme(themes[nextIndex]);
   };
 
@@ -22,11 +22,10 @@ const HeaderContainer = ({ theme, setTheme }) => {
 
       <div className="headerThemes">
         <span>THEME</span>
+        <button onClick={next}>
+          <CurrentTheme theme={theme} />
+        </button>
       </div>
-
-      <button onClick={next}>
-        <span>next</span>
-      </button>
     </div>
   );
 };

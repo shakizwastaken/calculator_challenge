@@ -2,6 +2,18 @@
 
 @layer components {
   .headerContainer {
-    @apply w-full flex justify-around;
+    @apply w-full flex justify-between;
+  }
+
+  .headerThemes {
+    @apply flex justify-center items-center gap-2;
+  }
+
+  .headerThemes > span {
+    @apply text-[50%];
+  }
+
+  .headerThemes_themes {
+    @apply flex gap-2 text-[50%];
   }
 }
