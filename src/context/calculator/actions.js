@@ -1,8 +1,6 @@
-import { keyTypes } from "../../components/keypad/types";
-
 export const actions = {
   number: "NUMBER",
-  
+
   addition: "ADDITION",
   sutraction: "SUBSTRACTION",
   multiplication: "MULTIPLICATION",
@@ -11,29 +9,24 @@ export const actions = {
   reset: "RESET",
   delete: "DELETE",
 
-  sumbol_dot: "SYMBOL_DOT"
-
+  sumbol_dot: "SYMBOL_DOT",
 };
 
 //dispatch
-export const dispatchPressButton = (dispatch,type) => {
-  if(Number.isInteger(type.value)){
+export const dispatchPressButton = (dispatch, type) => {
+  if (Number.isInteger(type.value)) {
     dispatch({
-      type:actions.number,
-      payload:type.value
+      type: actions.number,
+      payload: type.value,
     });
-  }
-  else{
+  } else {
     dispatch({
-      type:type.value
+      type: type.value,
+      payload: type,
     });
   }
 
-  return {
-  }
-
+  return {};
 };
 
-export const calculate = (action) =>{
-
-}
+export const calculate = (action) => {};

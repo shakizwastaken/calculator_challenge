@@ -2,6 +2,9 @@
 
 @layer components {
   .displayContainer {
-    @apply bg-screenBg flex justify-end items-end;
+    @apply bg-screenBg flex justify-end items-end flex-col;
+  }
+
+  .displayContainer > h1 {
   }
 }

@@ -1,11 +1,11 @@
 import "./display.css";
 
-import { useEffect } from "react";
 import { useCalculator } from "../../context/calculator";
 
 const DisplayContainer = ({ theme }) => {
-  const {state:{ current }}  = useCalculator();
-
+  const {
+    state: { current, previous, operation },
+  } = useCalculator();
 
   return (
     <div
@@ -13,7 +13,10 @@ const DisplayContainer = ({ theme }) => {
         theme === "default" ? "textColorLight" : "textColorDark"
       }`}
     >
-      {current}
+      <span>
+        {previous} {operation.value && operation.label}
+      </span>
+      <h1>{current}</h1>
     </div>
   );
 };
