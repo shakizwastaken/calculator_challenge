@@ -1,63 +1,40 @@
 import { createContext, useContext, useReducer } from "react";
+import { Operation } from "../../utils/actions";
 import { actions } from "./actions";
 
 const initialState = {
   history: [],
-  operation: {},
-  current: 0,
-  previous: 0,
-  action: "",
+  operation: new Operation(0, undefined, undefined, []),
+  action: {},
 };
 
 export const calculatorReducer = (state, { type, payload }) => {
+  // clone operation from state to avoid mutation
+  let operation = state.operation.clone();
+
   switch (type) {
     case actions.number:
-      return { ...state, current: state.current * 10 + payload };
+      operation.addNum(payload);
+      return { ...state, operation };
 
     case actions.calculate:
-      switch (state.operation.value) {
-        case actions.addition:
-          return {
-            ...state,
-            operation: {},
-            current: state.current + state.previous,
-          };
+      operation?.calc();
+      return { ...state, operation };
 
-        case actions.multiplication:
-          return {
-            ...state,
-            operation: {},
-            current: state.current + state.previous,
-          };
-
-        case actions.sutraction:
-          return {
-            ...state,
-            operation: {},
-            current: state.current + state.previous,
-          };
-
-        case actions.division:
-          return {
-            ...state,
-            operation: {},
-            current: state.current + state.previous,
-          };
-
-        default:
-          return state;
-      }
+    case actions.delete:
+      operation.setAction(payload).calc();
+      return { ...state, operation };
 
     case actions.reset:
-      return initialState;
+      return {
+        ...initialState,
+        history: [...state.history, state.operation],
+        operation: new Operation(0, undefined, undefined, []),
+      };
 
     default:
-      return {
-        ...state,
-        operation: payload,
-        previous: state.current,
-        current: 0,
-      };
+      operation.setAction(payload);
+      return { ...state, operation };
   }
 };
 

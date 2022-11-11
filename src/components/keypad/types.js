@@ -1,3 +1,5 @@
+import { Action } from "../../utils/actions";
+
 export const keyStyles = {
   main: "bg-keyBgMain hover:bg-keyBgMainActive text-textColorDark shadow-keyShadowMain ",
   primary:
@@ -12,39 +14,14 @@ export const keyTypes = {
     value,
   }),
 
-  operations: {
-    addition: {
-      label: "+",
-      value: "ADDITION",
-    },
-    substraction: {
-      label: "-",
-      value: "SUBSTRACTION",
-    },
-    multiplication: {
-      label: "x",
-      value: "MULTIPLICATION",
-    },
-    division: {
-      label: "/",
-      value: "DIVISION",
-    },
-    calculate: {
-      label: "=",
-      value: "CALCULATE",
-      style: keyStyles.accent,
-    },
-    reset: {
-      label: "RESET",
-      value: "RESET",
-      style: keyStyles.primary,
-    },
-    delete: {
-      label: "DEL",
-      value: "DELETE",
-      style: keyStyles.primary,
-    },
-  },
+  actions: [
+    new Action("Del", "DELETE", (a) => Math.trunc(a / 10)),
+    new Action("+", "ADDITION", (a, b) => a + b),
+    new Action("-", "SUBSTRACTION", (a, b) => a - b),
+    new Action("/", "DIVISION", (a, b) => a / b),
+    new Action("*", "MULTIPLICATION", (a, b) => a * b),
+    new Action("Reset", "RESET", (initialState) => initialState),
+  ],
 
   symbols: {
     dot: {

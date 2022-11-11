@@ -5,6 +5,7 @@ export const actions = {
   sutraction: "SUBSTRACTION",
   multiplication: "MULTIPLICATION",
   divsion: "DIVISION",
+
   calculate: "CALCULATE",
   reset: "RESET",
   delete: "DELETE",

@@ -4,7 +4,7 @@ import { useCalculator } from "../../context/calculator";
 
 const DisplayContainer = ({ theme }) => {
   const {
-    state: { current, previous, operation },
+    state: { operation },
   } = useCalculator();
 
   return (
@@ -13,10 +13,8 @@ const DisplayContainer = ({ theme }) => {
         theme === "default" ? "textColorLight" : "textColorDark"
       }`}
     >
-      <span>
-        {previous} {operation.value && operation.label}
-      </span>
-      <h1>{current}</h1>
+      <span>{operation.formatPrev()}</span>
+      <h1>{operation.current}</h1>
     </div>
   );
 };
