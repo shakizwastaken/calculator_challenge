@@ -1,9 +1,10 @@
-import { useEffect } from "react";
-import { useCalculator } from "../../context/calculator";
 import "./display.css";
 
+import { useEffect } from "react";
+import { useCalculator } from "../../context/calculator";
+
 const DisplayContainer = ({ theme }) => {
-  const {state:{current}}  = useCalculator();
+  const {state:{ current }}  = useCalculator();
 
 
   return (

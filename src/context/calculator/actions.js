@@ -15,12 +15,17 @@ export const actions = {
 
 };
 
+//dispatch
 export const dispatchPressButton = (dispatch,type) => {
-
   if(Number.isInteger(type.value)){
     dispatch({
       type:actions.number,
       payload:type.value
+    });
+  }
+  else{
+    dispatch({
+      type:type.value
     });
   }
 

@@ -12,25 +12,28 @@ const initialState = {
 export const calculatorReducer = (state, { type, payload }) => {
   switch (type) {
     case actions.number:
-      return {...state,current:state.current * 10 + payload};
+      return {...state, current:state.current * 10 + payload};
 
-    // case actions.calculate:
-    //   switch(state.operation){
-    //     case actions.addition:
-    //         state.current += state.previous;
+    case actions.calculate:
+      switch(state.operation){
+        case actions.addition:
+          return {...state, operation:'', current:state.current + state.previous};
 
-    //     case actions.multiplication:
-    //       state.current *= state.previous;
+        case actions.multiplication:
+          return {...state, operation:'', current:state.current+state.previous};
 
-    //     case actions.sutraction:
-    //       state.current -= state.previous;
-    
-    //     case actions.division:
-    //       state.current /= state.previous;
-    //}
+        case actions.sutraction:          
+          return {...state, operation:'', current:state.current+state.previous};
+
+        case actions.division:
+          return {...state, operation:'', current:state.current+state.previous};
+    }
+
+    case actions.reset:
+        return initialState;
 
     default:
-      return state;
+      return {...state,operation:type,previous:state.current};
   }
 
 };
